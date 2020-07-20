@@ -1,0 +1,23 @@
+{
+  "name": "goalgetter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mnicolai20/GoalGetter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mnicolai20/GoalGetter/issues"
+  },
+  "homepage": "https://github.com/mnicolai20/GoalGetter#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
