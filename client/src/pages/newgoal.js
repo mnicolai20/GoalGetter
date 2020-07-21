@@ -24,15 +24,15 @@ class NewGoal extends React.Component {
                     <div className="form-group">
                         <label for="exampleFormControlSelect2">categories</label>
                         <select multiple className="form-control" id="exampleFormControlSelect2">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                            <option>Health</option>
+                            <option>Travel</option>
+                            <option>Fitness</option>
+                            <option>Finance</option>
+                            <option>Networking</option>
                         </select>
                     </div>
                 </div>
-
+           {/*   sub category drop down here dropdown*/}
                 <div className="form-group">
                     <label forHTLM="exampleFormControlTextarea1">Description</label>
                     <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" />
