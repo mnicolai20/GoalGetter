@@ -11,7 +11,7 @@ if (process.env.NODE_ENV === "production") {
 }
 app.use(routes);
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactcms");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/goaldb");
 
 app.listen(PORT, function () {
     console.log(`We Did it  ==> API Server now listening on PORT ${PORT}!`);
