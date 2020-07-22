@@ -6,8 +6,6 @@ class NewGoal extends React.Component {
     constructor(props) { // as soon as component is rendered
         super(props); // calls the parent react component class structure
         this.state = { value: '' }; // intializing state data is being in compoent so its intializing it
-
-      
     }
 
     
@@ -27,8 +25,9 @@ class NewGoal extends React.Component {
                             <option>Health</option>
                             <option>Travel</option>
                             <option>Fitness</option>
-                            <option>Finance</option>
-                            <option>Networking</option>
+                            <option>Personal Finance</option>
+                            <option>Business</option>
+                            <option>Social</option>
                         </select>
                     </div>
                 </div>
