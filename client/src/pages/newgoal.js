@@ -21,12 +21,37 @@ class NewGoal extends React.Component {
                     <div className="form-group">
                         <label for="exampleFormControlSelect2">categories</label>
                         <select multiple className="form-control" id="exampleFormControlSelect2">
-                            <option>Health</option>
-                            <option>Travel</option>
-                            <option>Fitness</option>
-                            <option>Personal Finance</option>
-                            <option>Business</option>
-                            <option>Social</option>
+                            <optiongroup label = 'health'>
+                             <option>Sleep</option>
+                             <option>Nutrition</option>
+                            <option>Stress Relief</option>
+                            </optiongroup>
+                            <optiongroup label= 'travel'>
+                                <option>The U.S</option>
+                                <option>Europe</option>
+                                <option>Asia</option>
+                            </optiongroup>
+                            
+                            <optiongroup label = 'fitness'>
+                                <option>Running</option>
+                                <option>Weight Training</option>
+                                <option>Special Events</option>
+                            </optiongroup>
+                            <optiongroup label= 'personal finance'>
+                            <option>Investments</option>
+                            <option>Saving</option>
+                            <option>Spending</option>
+
+                            </optiongroup>
+                            <optiongroup label= 'business'>
+                                <option>Networking Events</option>
+                                <option>Ideas</option>
+                                <option>Mentoring</option>
+                                </optiongroup> 
+                            <optiongroup label = 'Recreational Activities'></optiongroup>
+                            <option>Softball</option>
+                            <option>Happy Hour</option>
+                            <option> Kickball</option>
                         </select>
                     </div>
                 </div>
