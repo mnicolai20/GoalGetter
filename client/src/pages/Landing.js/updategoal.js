@@ -1,7 +1,8 @@
 import React from 'react';
+import NewGoal from '.pages/newgoal';
 
 
-class NewGoal extends React.Component {
+class UpdateGoal extends React.Component {
     constructor(props) { // as soon as component is rendered
         super(props); // calls the parent react component class structure
         this.state = { value: '' }; // intializing state data is being in compoent so its intializing it
@@ -43,4 +44,4 @@ class NewGoal extends React.Component {
     }
 }
 
-export default NewGoal;
+export default UpdateGoal;
