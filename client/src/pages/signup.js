@@ -57,14 +57,11 @@ render() {
 
             <Form.Group controlId="formBasicPassword">
                 <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" />
+                <Form.Control type="password" placeholder="Password" value={this.state.password} onChange={this.handleChange}/>
             </Form.Group>
-            <Form.Group controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Check me out" />
-            </Form.Group>
-          <Button variant="primary" type="submit" onClick={this.handleSubmit}>
-            Submit
-          </Button>
+            <Button variant="primary" type="submit" onClick={this.handleSubmit}>
+                Submit
+            </Button>
         </Form>
     </div>
     )
