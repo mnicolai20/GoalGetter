@@ -2,6 +2,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NewGoals from "./pages/newgoal";
+import SignUp from "./pages/signup";
 ;
 
 function App() {
@@ -10,8 +11,9 @@ function App() {
       <div>
         
         <Switch>
-          <Route exact path={["/", "/newgoals"]}>
+          <Route exact path={["/", "/newgoals", "signup"]}>
             <NewGoals />
+            <SignUp />
           </Route>
           
            
