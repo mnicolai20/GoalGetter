@@ -1,5 +1,5 @@
 import React from 'react';
-import NewGoal from '.pages/newgoal';
+//import NewGoal from '.pages/newgoal';
 
 
 class UpdateGoal extends React.Component {
@@ -12,7 +12,7 @@ class UpdateGoal extends React.Component {
 
    
     
-
+// populate info with what I already have // get the ID of the user is trying to update then make a backend  api call and then all info we are getting you save it into state. then just update that we get data base.
     render() { // renders bootstrap html
         return (
             <form>
