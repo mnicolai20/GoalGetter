@@ -30,5 +30,12 @@
   "bugs": {
     "url": "https://github.com/mnicolai20/GoalGetter/issues"
   },
-  "homepage": "https://github.com/mnicolai20/GoalGetter#readme"
+  "homepage": "https://github.com/mnicolai20/GoalGetter#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.25",
+    "passport": "^0.4.1",
+    "react-bootstrap": "^1.2.2"
+  }
 }
