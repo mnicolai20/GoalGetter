@@ -7,11 +7,6 @@ class NewGoal extends React.Component {
         this.state = { value: '' }; // intializing state data is being in compoent so its intializing it
     }
 
-    
-
-   
-    
-
     render() { // renders bootstrap html
         return (
             <form>
