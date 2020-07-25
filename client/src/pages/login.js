@@ -1,11 +1,9 @@
 import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
+import axios from "axios";
 import { Form } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
-<<<<<<< HEAD
-import axios from "axios";
-=======
->>>>>>> master
-
+import "./login.css";
 
 class Login extends Component {
     constructor() {
@@ -18,7 +16,7 @@ class Login extends Component {
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
     }
-
+    
     handleChange(event) {
         this.setState({
             [event.target.name]: event.target.value
@@ -32,45 +30,47 @@ class Login extends Component {
             username: this.state.username,
             password: this.state.password
         })
-            .then(response => {
-                console.log(response)
-                if (response.status === 200) {
-                    this.props.updateUser({
-                        loggedIn: true,
-                        username: response.data.username
-                    })
-                    this.setState({
-                        redirectTo: "/"
-                    })
-                }
-            }).catch(error => {
-                console.log(error);
-            })
+        .then(response => {
+            console.log(response)
+            if(response.status === 200) {
+                this.props.updateUser({
+                    loggedIn: true,
+                    username: response.data.username
+                })
+                this.setState({
+                    redirectTo: "/"
+                })
+            }
+        }).catch(error => {
+            console.log(error);
+        })
     }
 
     render() {
-        if (this.state.redirectTo) {
+        if(this.state.redirectTo){
             return <Redirect to={{ pathname: this.state.redirectTo }} />
         } else {
             return (
+                <div className="page">
+                <h4 className="title">Log In</h4>
                 <Form>
-                    <Form.Group controlId="formBasicEmail">
+                    <Form.Group controlId="formBasicEmail" className="usernameLine">
                         <Form.Label>Username</Form.Label>
                         <Form.Control type="input" placeholder="Enter username" />
                     </Form.Group>
 
-                    <Form.Group controlId="formBasicPassword">
+                    <Form.Group controlId="formBasicPassword" className="usernameLine">
                         <Form.Label>Password</Form.Label>
-<<<<<<< HEAD
                         <Form.Control type="input" placeholder="Password" value={this.state.password} onChange={this.handleChange}/>
-=======
-                        <Form.Control type="password" placeholder="Password" value={this.state.password} onChange={this.handleChange} />
->>>>>>> master
                     </Form.Group>
-                    <Button variant="primary" type="submit" onClick={this.handleSubmit}>
+                    <Button variant="primary" type="submit" onClick={this.handleSubmit} className="submit">
                         Submit
                     </Button>
+                    <Button variant="primary" type="submit" href="/signup" className="submit">
+                        Sign Up!
+                    </Button>
                 </Form>
+                </div>
             )
         }
     }
