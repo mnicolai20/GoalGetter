@@ -7,7 +7,9 @@ class DeleteGoal extends React.Component {
         this.state = { value: '' }; // intializing state data is being in compoent so its intializing it
     }
 
+// css models
 
+// impliment font awesome icons
 
     render() { // renders bootstrap html
         return (
