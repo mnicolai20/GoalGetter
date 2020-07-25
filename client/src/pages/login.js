@@ -1,8 +1,10 @@
 import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
-import axios from "axios";
 import { Form } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
+<<<<<<< HEAD
+import axios from "axios";
+=======
+>>>>>>> master
 
 
 class Login extends Component {
@@ -59,7 +61,11 @@ class Login extends Component {
 
                     <Form.Group controlId="formBasicPassword">
                         <Form.Label>Password</Form.Label>
+<<<<<<< HEAD
+                        <Form.Control type="input" placeholder="Password" value={this.state.password} onChange={this.handleChange}/>
+=======
                         <Form.Control type="password" placeholder="Password" value={this.state.password} onChange={this.handleChange} />
+>>>>>>> master
                     </Form.Group>
                     <Button variant="primary" type="submit" onClick={this.handleSubmit}>
                         Submit
@@ -69,3 +75,5 @@ class Login extends Component {
         }
     }
 }
+
+export default Login;
