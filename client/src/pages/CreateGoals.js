@@ -1,10 +1,11 @@
 import React from "react";
 import Hero from "../components/Hero";
+import { Container, Row, Col } from "react-bootstrap";
 
 function CreateGs() {
     return (
         <div>
-            <Hero backgroundImage="../images/createGs1.jpg"></Hero>
+            <Hero backgroundImage="./images/createGs1.jpg"></Hero>
             <Container style={{ marginTop: 30 }}>
                 <Row>
                     <Col size="md-12">
@@ -13,10 +14,10 @@ function CreateGs() {
                     </Col>
                 </Row>
                 <Row>
-                    <Col size="md-12">
+                    {/* <Col size="md-12">
                             <input type="text"></input>
                             <button>You got this!!!</button>
-                    </Col>
+                    </Col> */}
                 </Row>
             </Container>
 

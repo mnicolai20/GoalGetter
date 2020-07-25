@@ -16,41 +16,44 @@ class NewGoal extends React.Component {
                     <div className="form-group">
                         <label for="exampleFormControlSelect2">categories</label>
                         <select multiple className="form-control" id="exampleFormControlSelect2">
-                            <optiongroup label = 'health'>
-                             <option>Sleep</option>
-                             <option>Nutrition</option>
-                            <option>Stress Relief</option>
+                            <optiongroup label='health'>
+                                <option>Sleep</option>
+                                <option>Nutrition</option>
+                                <option>Stress Relief</option>
                             </optiongroup>
-                            <optiongroup label= 'travel'>
+
+                            <optiongroup label='travel'>
                                 <option>The U.S</option>
                                 <option>Europe</option>
                                 <option>Asia</option>
                             </optiongroup>
-                            
-                            <optiongroup label = 'fitness'>
+
+                            <optiongroup label='fitness'>
                                 <option>Running</option>
                                 <option>Weight Training</option>
                                 <option>Special Events</option>
                             </optiongroup>
-                            <optiongroup label= 'personal finance'>
-                            <option>Investments</option>
-                            <option>Saving</option>
-                            <option>Spending</option>
 
+                            <optiongroup label='personal finance'>
+                                <option>Investments</option>
+                                <option>Saving</option>
+                                <option>Spending</option>
                             </optiongroup>
-                            <optiongroup label= 'business'>
+
+                            <optiongroup label='business'>
                                 <option>Networking Events</option>
                                 <option>Ideas</option>
                                 <option>Mentoring</option>
-                                </optiongroup> 
-                            <optiongroup label = 'Recreational Activities'></optiongroup>
+                            </optiongroup>
+
+                            <optiongroup label='Recreational Activities'></optiongroup>
                             <option>Softball</option>
                             <option>Happy Hour</option>
                             <option> Kickball</option>
                         </select>
                     </div>
                 </div>
-           {/*   sub category drop down here dropdown*/}
+                {/*   sub category drop down here dropdown*/}
                 <div className="form-group">
                     <label forHTLM="exampleFormControlTextarea1">Description</label>
                     <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" />
