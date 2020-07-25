@@ -3,7 +3,7 @@ import { Redirect } from "react-router-dom";
 import axios from "axios";
 import { Form } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
-
+import "./login.css";
 
 class Login extends Component {
     constructor() {
@@ -51,21 +51,29 @@ class Login extends Component {
             return <Redirect to={{ pathname: this.state.redirectTo }} />
         } else {
             return (
+                <div className="page">
+                <h4 className="title">Log In</h4>
                 <Form>
-                    <Form.Group controlId="formBasicEmail">
+                    <Form.Group controlId="formBasicEmail" className="usernameLine">
                         <Form.Label>Username</Form.Label>
                         <Form.Control type="input" placeholder="Enter username" />
                     </Form.Group>
 
-                    <Form.Group controlId="formBasicPassword">
+                    <Form.Group controlId="formBasicPassword" className="usernameLine">
                         <Form.Label>Password</Form.Label>
-                        <Form.Control type="password" placeholder="Password" value={this.state.password} onChange={this.handleChange}/>
+                        <Form.Control type="input" placeholder="Password" value={this.state.password} onChange={this.handleChange}/>
                     </Form.Group>
-                    <Button variant="primary" type="submit" onClick={this.handleSubmit}>
+                    <Button variant="primary" type="submit" onClick={this.handleSubmit} className="submit">
                         Submit
                     </Button>
+                    <Button variant="primary" type="submit" href="/signup" className="submit">
+                        Sign Up!
+                    </Button>
                 </Form>
+                </div>
             )
         }
     }
 }
+
+export default Login;

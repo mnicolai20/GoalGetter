@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Form } from 'react-bootstrap';
-import axios from "axios";
 import { Button } from 'react-bootstrap';
+import axios from "axios";
+import "./login.css";
 
 class Signup extends Component {
     constructor() {
@@ -49,16 +50,16 @@ class Signup extends Component {
 render() {
     return(
     <div className="page">
-        <h4>Sign up</h4>
-        <Form>
-            <Form.Group controlId="formBasicEmail">
+        <h4 className="title">Sign up</h4>
+        <Form className="signupSheet">
+            <Form.Group controlId="formBasicEmail" className="usernameLine">
                 <Form.Label>Create Username</Form.Label>
-                <Form.Control type="input" placeholder="Enter username" />
+                <Form.Control type="input" placeholder="Enter username"/>
             </Form.Group>
 
-            <Form.Group controlId="formBasicPassword">
+            <Form.Group controlId="formBasicPassword" className="usernameLine">
                 <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" value={this.state.password} onChange={this.handleChange}/>
+                <Form.Control type="input" placeholder="Password" value={this.state.password} onChange={this.handleChange}/>
             </Form.Group>
             <Button variant="primary" type="submit" onClick={this.handleSubmit}>
                 Submit
