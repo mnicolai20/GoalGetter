@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import axios from "axios";
 import { Form } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
 
 class Login extends Component {
@@ -15,7 +16,7 @@ class Login extends Component {
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
     }
-    
+
     handleChange(event) {
         this.setState({
             [event.target.name]: event.target.value
@@ -29,24 +30,24 @@ class Login extends Component {
             username: this.state.username,
             password: this.state.password
         })
-        .then(response => {
-            console.log(response)
-            if(response.status === 200) {
-                this.props.updateUser({
-                    loggedIn: true,
-                    username: response.data.username
-                })
-                this.setState({
-                    redirectTo: "/"
-                })
-            }
-        }).catch(error => {
-            console.log(error);
-        })
+            .then(response => {
+                console.log(response)
+                if (response.status === 200) {
+                    this.props.updateUser({
+                        loggedIn: true,
+                        username: response.data.username
+                    })
+                    this.setState({
+                        redirectTo: "/"
+                    })
+                }
+            }).catch(error => {
+                console.log(error);
+            })
     }
 
     render() {
-        if(this.state.redirectTo){
+        if (this.state.redirectTo) {
             return <Redirect to={{ pathname: this.state.redirectTo }} />
         } else {
             return (
@@ -58,7 +59,7 @@ class Login extends Component {
 
                     <Form.Group controlId="formBasicPassword">
                         <Form.Label>Password</Form.Label>
-                        <Form.Control type="password" placeholder="Password" value={this.state.password} onChange={this.handleChange}/>
+                        <Form.Control type="password" placeholder="Password" value={this.state.password} onChange={this.handleChange} />
                     </Form.Group>
                     <Button variant="primary" type="submit" onClick={this.handleSubmit}>
                         Submit
