@@ -10,18 +10,11 @@ function App() {
   return (
     <Router>
       <div>
-        
-        <Switch>
-          <Route exact path={["/", "/newgoals", "/signup", "/Login"]}>
-            <NewGoals />
-            <SignUp />
-            <LogIn />
-          </Route>
-          
-           
-         
-         
-        </Switch>
+
+        <Route exact path="/" component={LogIn} />
+        <Route exact path="/signup" component={SignUp} />
+        <Route exact path="/newgoals" component={NewGoals} />
+
       </div>
     </Router>
   );
