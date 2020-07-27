@@ -56,12 +56,12 @@ class LoginForm extends Component {
                     <Form>
                         <Form.Group controlId="formBasicEmail" className="usernameLine">
                             <Form.Label>Username</Form.Label>
-                            <Form.Control type="input" placeholder="Enter username" />
+                            <Form.Control type="input" name= "username" placeholder="Enter username" value={this.state.username} onChange={this.handleChange}/>
                         </Form.Group>
 
                         <Form.Group controlId="formBasicPassword" className="usernameLine">
                             <Form.Label>Password</Form.Label>
-                            <Form.Control type="input" placeholder="Password" value={this.state.password} onChange={this.handleChange} />
+                            <Form.Control type="input"  name= "password" placeholder="Password" value={this.state.password} onChange={this.handleChange} />
                            <hr></hr>
                             <Button variant="primary" type="submit" onClick={this.handleSubmit} className="submit sub1">
                                 Submit
