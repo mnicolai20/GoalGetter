@@ -16,7 +16,7 @@ class LoginForm extends Component {
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
     }
-    
+
     handleChange(event) {
         this.setState({
             [event.target.name]: event.target.value
@@ -30,46 +30,47 @@ class LoginForm extends Component {
             username: this.state.username,
             password: this.state.password
         })
-        .then(response => {
-            console.log(response)
-            if(response.status === 200) {
-                this.props.updateUser({
-                    loggedIn: true,
-                    username: response.data.username
-                })
-                this.setState({
-                    redirectTo: "/"
-                })
-            }
-        }).catch(error => {
-            console.log(error);
-        })
+            .then(response => {
+                console.log(response)
+                if (response.status === 200) {
+                    this.props.updateUser({
+                        loggedIn: true,
+                        username: response.data.username
+                    })
+                    this.setState({
+                        redirectTo: "/"
+                    })
+                }
+            }).catch(error => {
+                console.log(error);
+            })
     }
 
     render() {
-        if(this.state.redirectTo){
+        if (this.state.redirectTo) {
             return <Redirect to={{ pathname: this.state.redirectTo }} />
         } else {
             return (
                 <div className="page">
-                <h4 className="title">Log In</h4>
-                <Form>
-                    <Form.Group controlId="formBasicEmail" className="usernameLine">
-                        <Form.Label>Username</Form.Label>
-                        <Form.Control type="input" placeholder="Enter username" />
-                    </Form.Group>
+                    <h4 className="title">Log In</h4>
+                    <Form>
+                        <Form.Group controlId="formBasicEmail" className="usernameLine">
+                            <Form.Label>Username</Form.Label>
+                            <Form.Control type="input" placeholder="Enter username" />
+                        </Form.Group>
 
-                    <Form.Group controlId="formBasicPassword" className="usernameLine">
-                        <Form.Label>Password</Form.Label>
-                        <Form.Control type="input" placeholder="Password" value={this.state.password} onChange={this.handleChange}/>
-                    </Form.Group>
-                    <Button variant="primary" type="submit" onClick={this.handleSubmit} className="submit">
-                        Submit
+                        <Form.Group controlId="formBasicPassword" className="usernameLine">
+                            <Form.Label>Password</Form.Label>
+                            <Form.Control type="input" placeholder="Password" value={this.state.password} onChange={this.handleChange} />
+                            <Button variant="primary" type="submit" onClick={this.handleSubmit} className="submit">
+                                Submit
                     </Button>
-                    <Button variant="primary" type="submit" href="/signup" className="submit">
-                        Sign Up!
+                            <Button variant="danger" type="submit" href="/signup" className="submit">
+                                Sign Up!
                     </Button>
-                </Form>
+                        </Form.Group>
+
+                    </Form>
                 </div>
             )
         }
