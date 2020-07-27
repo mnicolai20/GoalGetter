@@ -13,49 +13,51 @@ class NewGoal extends React.Component {
                 <div className="form-group">
                     <label forHTML="formGroupExampleInput">Title of new goal</label>
                     <input type="text" className="form-control" id="formGroupExampleInput" placeholder="New Goal" />
-                    <div className="form-group">
-                        <label for="exampleFormControlSelect2">categories</label>
-                        <select multiple className="form-control" id="exampleFormControlSelect2">
-                            <optiongroup label='health'>
-                                <option>Sleep</option>
-                                <option>Nutrition</option>
-                                <option>Stress Relief</option>
-                            </optiongroup>
+                </div>
+                <div className="form-group">
+                    <label forHTML="exampleFormControlSelect2">categories</label>
+                    <select multiple className="form-control" id="exampleFormControlSelect2">
+                        <optgroup label='health'>
+                            <option>Sleep</option>
+                            <option>Nutrition</option>
+                            <option>Stress Relief</option>
+                        </optgroup>
 
-                            <optiongroup label='travel'>
-                                <option>The U.S</option>
-                                <option>Europe</option>
-                                <option>Asia</option>
-                            </optiongroup>
+                        <optgroup label='travel'>
+                            <option>The U.S</option>
+                            <option>Europe</option>
+                            <option>Asia</option>
+                        </optgroup>
 
-                            <optiongroup label='fitness'>
-                                <option>Running</option>
-                                <option>Weight Training</option>
-                                <option>Special Events</option>
-                            </optiongroup>
+                        <optgroup label='fitness'>
+                            <option>Running</option>
+                            <option>Weight Training</option>
+                            <option>Special Events</option>
+                        </optgroup>
 
-                            <optiongroup label='personal finance'>
-                                <option>Investments</option>
-                                <option>Saving</option>
-                                <option>Spending</option>
-                            </optiongroup>
+                        <optgroup label='personal finance'>
+                            <option>Investments</option>
+                            <option>Saving</option>
+                            <option>Spending</option>
+                        </optgroup>
 
-                            <optiongroup label='business'>
-                                <option>Networking Events</option>
-                                <option>Ideas</option>
-                                <option>Mentoring</option>
-                            </optiongroup>
+                        <optgroup label='business'>
+                            <option>Networking Events</option>
+                            <option>Ideas</option>
+                            <option>Mentoring</option>
+                        </optgroup>
 
-                            <optiongroup label='Recreational Activities'></optiongroup>
+                        <optgroup label='Recreational Activities'>
                             <option>Softball</option>
                             <option>Happy Hour</option>
                             <option> Kickball</option>
-                        </select>
-                    </div>
+                        </optgroup>
+                    </select>
                 </div>
+
                 {/*   sub category drop down here dropdown*/}
                 <div className="form-group">
-                    <label forHTLM="exampleFormControlTextarea1">Description</label>
+                    <label forHTML="exampleFormControlTextarea1">Description</label>
                     <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" />
                 </div>
                 <button type="submit" className="btn btn-primary">Create new goal</button>
