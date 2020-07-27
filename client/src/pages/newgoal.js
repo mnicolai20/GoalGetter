@@ -11,11 +11,11 @@ class NewGoal extends React.Component {
         return (
             <form>
                 <div className="form-group">
-                    <label forHTML="formGroupExampleInput">Title of new goal</label>
+                    <label>Title of new goal</label>
                     <input type="text" className="form-control" id="formGroupExampleInput" placeholder="New Goal" />
                 </div>
                 <div className="form-group">
-                    <label forHTML="exampleFormControlSelect2">categories</label>
+                    <label>categories</label>
                     <select multiple className="form-control" id="exampleFormControlSelect2">
                         <optgroup label='health'>
                             <option>Sleep</option>
@@ -57,7 +57,7 @@ class NewGoal extends React.Component {
 
                 {/*   sub category drop down here dropdown*/}
                 <div className="form-group">
-                    <label forHTML="exampleFormControlTextarea1">Description</label>
+                    <label>Description</label>
                     <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" />
                 </div>
                 <button type="submit" className="btn btn-primary">Create new goal</button>
