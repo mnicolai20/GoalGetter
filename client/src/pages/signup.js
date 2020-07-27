@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Form } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
-import axios from "axios";
+import  axios  from "axios";
 import "./login.css";
 
 class Signup extends Component {
