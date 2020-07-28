@@ -26,4 +26,4 @@ function CreateGs() {
     )
 }
 
-export default CreateGs;
+export default Homepage;
