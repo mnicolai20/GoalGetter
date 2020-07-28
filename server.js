@@ -1,6 +1,7 @@
 const express = require("express");
 var session = require("express-session");
 const mongoose = require("mongoose");
+const passport = require('passport');
 
 const routes = require("./routes");
 
@@ -19,7 +20,7 @@ app.use(passport.session());
 
 app.use(routes);
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/goaldb");
+mongoose.connect("mongodb+srv://dbGoals:Goals@cluster0.scopj.mongodb.net/dbGoals?retryWrites=true&w=majority");
 
 app.listen(PORT, function () {
     console.log(`We Did it  ==> API Server now listening on PORT ${PORT}!`);
