@@ -1,4 +1,7 @@
 import React from 'react';
+
+import DeleteBtn from '../components/deleteBtn';
+
 //import NewGoal from '.pages/newgoal';
 
 
@@ -67,7 +70,7 @@ class UpdateGoal extends React.Component {
                     <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" />
                 </div>
                 <button type="submit" className="btn btn-primary">Create new goal</button>
-
+             <DeleteBtn/>
             </form>
 
         );
