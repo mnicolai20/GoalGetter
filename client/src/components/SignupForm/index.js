@@ -12,7 +12,7 @@ class Signup extends Component {
             confirmPassword: ""
         }
         this.handleSubmit = this.handleSubmit.bind(this)
-        this.handleChange = this.handleChange.bind(this)    
+        this.handleChange = this.handleChange.bind(this)
     };
 
     handleChange(event) {
@@ -24,49 +24,52 @@ class Signup extends Component {
     handleSubmit(event) {
         event.preventDefault();
 
-        axios.post("/user/", {
+        axios.post("/auth/signup", {
             username: this.state.username,
             password: this.state.password
         })
-        .then(response => {
-            console.log(response)
-            if(!response.data.errmsg){
-                console.log("successful signup")
-                this.getSnapshotBeforeUpdate({
-                    // direct to login page
-                    redirectTo: "/login"
-                })
-            } else{
-                console.log("username already taken")
-            }
-        }).catch(error => {
-            console.log("signup error")
-            console.log(error);
-        })
+            .then(response => {
+                console.log(response)
+                if (!response.data.errmsg) {
+                    console.log("successful signup")
+                    // this.getSnapshotBeforeUpdate({
+                    //     // direct to login page
+                    //     redirectTo: "/login"
+                    // })
+                    this.getSnapshotBeforeUpdate({
+                        // direct to homepage after successful login
+                        redirectTo: "/homepage"
+                    })
+                } else {
+                    console.log("username already taken")
+                }
+            }).catch(error => {
+                console.log("signup error")
+                console.log(error);
+            })
     }
 
+    render() {
+        return (
+            <div className="page">
+                <h4 className="title">Sign up</h4>
+                <Form className="signupSheet">
+                    <Form.Group controlId="formBasicEmail" className="usernameLine">
+                        <Form.Label>Create Username</Form.Label>
+                        <Form.Control type="input" placeholder="Enter username" />
+                    </Form.Group>
 
-render() {
-    return(
-    <div className="page">
-        <h4 className="title">Sign up</h4>
-        <Form className="signupSheet">
-            <Form.Group controlId="formBasicEmail" className="usernameLine">
-                <Form.Label>Create Username</Form.Label>
-                <Form.Control type="input" placeholder="Enter username"/>
-            </Form.Group>
-
-            <Form.Group controlId="formBasicPassword" className="usernameLine">
-                <Form.Label>Password</Form.Label>
-                <Form.Control type="input" placeholder="Password" value={this.state.password} onChange={this.handleChange}/>
-            </Form.Group>
-            <Button variant="primary" type="submit" onClick={this.handleSubmit}>
-                Submit
+                    <Form.Group controlId="formBasicPassword" className="usernameLine">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control type="input" placeholder="Password" value={this.state.password} onChange={this.handleChange} />
+                    </Form.Group>
+                    <Button variant="primary" type="submit" onClick={this.handleSubmit}>
+                        Submit
             </Button>
-        </Form>
-    </div>
-    )
-}
+                </Form>
+            </div>
+        )
+    }
 }
 
 export default Signup;

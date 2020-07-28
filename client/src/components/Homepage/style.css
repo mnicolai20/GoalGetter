@@ -33,7 +33,7 @@
   }
 
   .logo {
-    margin-left: 33%;
+    margin-left: 29%;
     /* margin-top: -3%; */
     border-radius: 20%;
     margin-bottom: 26px;
@@ -47,18 +47,28 @@
   } */
 
   .createBtn {
-background-color: rgb(34,34,34);
-color: white;
-  }
-
-  .updateBtn {
-    background-color:  rgb(231,76,50);
-  }
-  
-  .updateBtn:hover {
-    background-color: chocolate;
-  }
-  .connectBtn {
-    background-color: rgb(12,11,11);
-  }
+    background-color: rgb(15, 15, 15);
+    color: white;
+      }
+      .createBtn:hover {
+        background-color: rgb(35,35,35);
+        color: white;
+      }
+    
+      .updateBtn {
+        background-color:  rgb(231,76,50);
+      }
+      .updateBtn:hover {
+        background-color: rgb(233, 56, 25);
+      }
+    
+      .connectBtn {
+        background-color: rgb(34,34,34);
+      }
+      .connectBtn:hover {
+        background-color: rgb(10, 25, 30);
+      }
+  /* .updateBtn:hover {
+    background-color: rgb(12,12,12);
+  } */
   
