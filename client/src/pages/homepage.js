@@ -2,7 +2,7 @@ import React from "react";
 import Hero from "../components/Hero";
 import { Container, Row, Col } from "react-bootstrap";
 
-function CreateGs() {
+function Homepage() {
     return (
         <div>
             <Hero backgroundImage="./images/createGs1.jpg"></Hero>
