@@ -1,0 +1,74 @@
+.hero {
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  .hero::after {
+    content: "";
+    display: block;
+    opacity: .2;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+  }
+  
+  .hero * {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hero h1, .hero h2 {
+    color: white;
+  }
+  
+  .hero h1 {
+    font-size: 60px;
+    padding-top: 140px;
+    margin-top: 0;
+  }
+
+  .logo {
+    margin-left: 29%;
+    /* margin-top: -3%; */
+    border-radius: 20%;
+    margin-bottom: 26px;
+    /* position: fixed;
+      top: 60px;
+      left: 80px; */
+  }
+
+  /* .logo::before {
+  
+  } */
+
+  .createBtn {
+    background-color: rgb(15, 15, 15);
+    color: white;
+      }
+      .createBtn:hover {
+        background-color: rgb(35,35,35);
+        color: white;
+      }
+    
+      .updateBtn {
+        background-color:  rgb(231,76,50);
+      }
+      .updateBtn:hover {
+        background-color: rgb(233, 56, 25);
+      }
+    
+      .connectBtn {
+        background-color: rgb(34,34,34);
+      }
+      .connectBtn:hover {
+        background-color: rgb(10, 25, 30);
+      }
+  /* .updateBtn:hover {
+    background-color: rgb(12,12,12);
+  } */
+  
