@@ -1,9 +1,9 @@
 // Requiring our models and passport as we've configured it
 var db = require("../models");
-const User = require("../models/user")
+//const User = require("../models/user")
 var passport = require("../config/passport");
-
-module.exports = function(app) {
+const express= require('express');
+const app= express.Router();
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
   // Otherwise the user will be sent an error
@@ -16,6 +16,7 @@ module.exports = function(app) {
   // otherwise send back an error
   app.post("/auth/signup", function(req, res) {
     const { username, password } = req.body;
+    res.json({username,password})
     // db.User.create({
     //     //match with signup form, username
     //   username: req.body.username,
@@ -27,56 +28,56 @@ module.exports = function(app) {
     //   .catch(function(err) {
     //     res.status(401).json(err);
     //   });
-    User.findOne({ username }).then(user => {
+    // db.User.findOne({ username }).then(user => {
 
-        if (user) {
-          // user exists
-          // user exists
-          errors.push({ msg: "username is already registered" });
-          const data = { success: false, errors: errors };
-          res.json(data);
-        } else {
-          const newUser = new User({
-            username,
-            password
-          });
+    //     if (user) {
+    //       // user exists
+    //       // user exists
+    //       errors.push({ msg: "username is already registered" });
+    //       const data = { success: false, errors: errors };
+    //       res.json(data);
+    //     } else {
+    //       const newUser = new db.User({
+    //         username,
+    //         password
+    //       });
   
   
-          bcrypt.genSalt(10, (err, salt) => {
-            bcrypt.hash(newUser.password, salt, (err, hash) => {
-              if (err) throw err;
-              // set password to hashed
-              newUser.password = hash;
-              // save user
-              newUser
-                .save()
-                .then(user => {
-                  req.logIn(user, err => {
-                    if (!err) {
-                      const results = {
-                        success: true,
-                        message: "user has successfully authenticated",
-                        // user: req.user,
-                        user: {
-                            username:req.user.username,
-                            goals: req.user.goals
-                        },
-                        cookies: req.cookies
-                      };
-                      res.json(results);
-                    } else {
-                      res.json(err);
-                    }
-                  });
-                  // res.redirect("/auth/login");
-                  // res.redirect(CLIENT_HOME_PAGE_URL);
-                })
-                .catch(err => console.log(err));
-            })
-          }
-          );
-        }
-      });
+    //       bcrypt.genSalt(10, (err, salt) => {
+    //         bcrypt.hash(newUser.password, salt, (err, hash) => {
+    //           if (err) throw err;
+    //           // set password to hashed
+    //           newUser.password = hash;
+    //           // save user
+    //           newUser
+    //             .save()
+    //             .then(user => {
+    //               req.logIn(user, err => {
+    //                 if (!err) {
+    //                   const results = {
+    //                     success: true,
+    //                     message: "user has successfully authenticated",
+    //                     // user: req.user,
+    //                     user: {
+    //                         username:req.user.username,
+    //                         goals: req.user.goals
+    //                     },
+    //                     cookies: req.cookies
+    //                   };
+    //                   res.json(results);
+    //                 } else {
+    //                   res.json(err);
+    //                 }
+    //               });
+    //               // res.redirect("/auth/login");
+    //               // res.redirect(CLIENT_HOME_PAGE_URL);
+    //             })
+    //             .catch(err => console.log(err));
+    //         })
+    //       }
+    //       );
+    //     }
+    //   });
   
   });
 
@@ -100,4 +101,5 @@ module.exports = function(app) {
       });
     }
   });
-};
+  
+  module.exports=app
