@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Form } from 'react-bootstrap';
-import { Button } from 'react-bootstrap';
+import { Form, Button } from 'react-bootstrap';
+import { Redirect } from "react-router-dom";
 import axios from "axios";
 
 class Signup extends Component {
@@ -13,6 +13,8 @@ class Signup extends Component {
         }
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
+        // const history = useHistory();
+        
     };
 
     handleChange(event) {
@@ -31,7 +33,10 @@ class Signup extends Component {
             .then(response => {
                 console.log(response)
                 if (!response.data.errmsg) {
-                    console.log("successful signup")
+                    console.log("successful signup");
+                    window.location="/homepage";
+                    // <Redirect to="/homepage"/>
+                    // this.props.history.push("/homepage");   
                     // this.getSnapshotBeforeUpdate({
                     //     // direct to login page
                     //     redirectTo: "/login"
