@@ -1,6 +1,6 @@
 import React from 'react';
 
-import DeleteBtn from '../components/deleteBtn';
+import DeleteBtn from '../components/DeleteBtn';
 
 //import NewGoal from '.pages/newgoal';
 
