@@ -61,7 +61,7 @@ class LoginForm extends Component {
 
                         <Form.Group controlId="formBasicPassword" className="usernameLine">
                             <Form.Label>Password</Form.Label>
-                            <Form.Control type="input"  name= "password" placeholder="Password" value={this.state.password} onChange={this.handleChange} />
+                            <Form.Control type="password"  name= "password" placeholder="Password" value={this.state.password} onChange={this.handleChange} />
                            <hr></hr>
                             <Button variant="primary" type="submit" onClick={this.handleSubmit} className="submit sub1">
                                 Submit
