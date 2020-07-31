@@ -10,10 +10,12 @@ const userSchema = new Schema({
         type: String,
         required: true
     },
-    goals: {
-        type: String,
-        required: false
-    }
+    goals: [
+        {
+          type: Schema.Types.ObjectId,
+          ref: "Goal"
+        }
+      ]
 });
 
 const User = mongoose.model("User", userSchema);
