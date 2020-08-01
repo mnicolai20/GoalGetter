@@ -1,4 +1,7 @@
-import React from 'react';
+import React from "react";
+import Hero from "../components/Homepage";
+import { Container, Row, Col, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";    
 
 
 class NewGoal extends React.Component {
@@ -15,33 +18,36 @@ class NewGoal extends React.Component {
                     <input type="text" className="form-control" id="formGroupExampleInput" placeholder="New Goal" />
                 </div>
                 <div className="form-group">
-                    <label>categories</label>
+                    <label>Scroll through Categories below:</label>
                     <select multiple className="form-control" id="exampleFormControlSelect2">
-                        <optgroup label='health'>
+                        <optgroup label='Health'>
                             <option>Sleep</option>
                             <option>Nutrition</option>
                             <option>Stress Relief</option>
                         </optgroup>
 
-                        <optgroup label='travel'>
-                            <option>The U.S</option>
+                        <optgroup label='Travel'>
+                            <option>North America</option>
+                            <option>Central/South America</option>
                             <option>Europe</option>
+                            <option>Africa</option>
                             <option>Asia</option>
+                            <option>Antarctica</option>
                         </optgroup>
 
-                        <optgroup label='fitness'>
+                        <optgroup label='Fitness'>
                             <option>Running</option>
                             <option>Weight Training</option>
                             <option>Special Events</option>
                         </optgroup>
 
-                        <optgroup label='personal finance'>
+                        <optgroup label='Personal Finance'>
                             <option>Investments</option>
                             <option>Saving</option>
                             <option>Spending</option>
                         </optgroup>
 
-                        <optgroup label='business'>
+                        <optgroup label='Business'>
                             <option>Networking Events</option>
                             <option>Ideas</option>
                             <option>Mentoring</option>
