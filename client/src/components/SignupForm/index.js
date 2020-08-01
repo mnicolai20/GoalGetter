@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Form, Button } from 'react-bootstrap';         
-import { Redirect } from "react-router-dom";
+// import { Redirect } from "react-router-dom";
 import axios from "axios";
 
 class Signup extends Component {
@@ -35,6 +35,8 @@ class Signup extends Component {
                 if (!response.data.errmsg) {
                     console.log("successful signup");
                     window.location = "/homepage";
+
+                    //====potentially comment out down to line 49
                     // <Redirect to="/homepage"/>
                     // this.props.history.push("/homepage");   
                     // this.getSnapshotBeforeUpdate({
@@ -45,6 +47,7 @@ class Signup extends Component {
                     //     // direct to homepage after successful login
                     //     redirectTo: "/homepage"
                     // })
+
                 } else {
                     console.log("username already taken")
                 }

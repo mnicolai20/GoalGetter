@@ -6,6 +6,7 @@ import SignUp from "./pages/signup";
 import LogIn from "./pages/login";
 import UpdateGoal from "./pages/updategoal";
 import Homepage from "./pages/homepage";
+// import DeleteBtn from "./components/DeleteBtn";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route exact path="/newgoals" component={NewGoals} />
         <Route exact path="/updategoal" component={UpdateGoal} />
         <Route exact path="/homepage" component={Homepage} />
+        {/* <Route exact path="/updategoal" component={DeleteBtn} /> */}
 
       </div>
     </Router>

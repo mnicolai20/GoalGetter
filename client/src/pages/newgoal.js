@@ -1,7 +1,8 @@
 import React from "react";
-import Hero from "../components/Homepage";
-import { Container, Row, Col, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";    
+// import { Col, Row, Container } from "../../components/Grid";
+// import Hero from "../components/Homepage";
+// import { Container, Row, Col, Button } from "react-bootstrap";
+// import { Link } from "react-router-dom";    
 
 
 class NewGoal extends React.Component {
@@ -15,7 +16,7 @@ class NewGoal extends React.Component {
             <form>
                 <div className="form-group">
                     <label>Title of new goal</label>
-                    <input type="text" className="form-control" id="formGroupExampleInput" placeholder="New Goal" />
+                    <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Create a New Goal" />
                 </div>
                 <div className="form-group">
                     <label>Scroll through Categories below:</label>
@@ -63,10 +64,10 @@ class NewGoal extends React.Component {
 
                 {/*   sub category drop down here dropdown*/}
                 <div className="form-group">
-                    <label>Description</label>
+                    <label>Give Further Details about your Goal:</label>
                     <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" />
                 </div>
-                <button type="submit" className="btn btn-primary">Create new goal</button>
+                <button type="submit" className="btn btn-primary">Go Get that Goal!</button>
 
             </form>
 

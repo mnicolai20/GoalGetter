@@ -22,7 +22,7 @@ function Homepage() {
                             Create New Goals
                     </Button>
                     </Link>
-                    <Link to="/viewUpdateGoals">
+                    <Link to="/updateGoal">
                         <Button variant="dark" size="lg" block className='updateBtn'>
                             View/Update Goals
                     </Button>

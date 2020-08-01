@@ -1,6 +1,6 @@
 import React from 'react';
 
-import DeleteBtn from '../components/DeleteBtn';
+import DeleteBtn from '../components/DeleteBtn/DeleteBtn';
 
 //import NewGoal from '.pages/newgoal';
 
@@ -26,31 +26,35 @@ class UpdateGoal extends React.Component {
                 <div className="form-group">
                     <label>categories</label>
                     <select multiple className="form-control" id="exampleFormControlSelect2">
-                        <optgroup label='health'>
+                        <optgroup label='Health'>
                             <option>Sleep</option>
                             <option>Nutrition</option>
                             <option>Stress Relief</option>
                         </optgroup>
 
-                        <optgroup label='travel'>
-                            <option>The U.S</option>
+                        <optgroup label='Travel'>
+                            <option>North America</option>
+                            <option>South/Central America</option>
                             <option>Europe</option>
+                            <option>Africa</option>
                             <option>Asia</option>
+                            <option>Australia/Oceania</option>
+                            <option>Antarctica</option>
                         </optgroup>
 
-                        <optgroup label='fitness'>
+                        <optgroup label='Fitness'>
                             <option>Running</option>
                             <option>Weight Training</option>
                             <option>Special Events</option>
                         </optgroup>
 
-                        <optgroup label='personal finance'>
+                        <optgroup label='Personal Finance'>
                             <option>Investments</option>
                             <option>Saving</option>
                             <option>Spending</option>
                         </optgroup>
 
-                        <optgroup label='business'>
+                        <optgroup label='Business'>
                             <option>Networking Events</option>
                             <option>Ideas</option>
                             <option>Mentoring</option>
