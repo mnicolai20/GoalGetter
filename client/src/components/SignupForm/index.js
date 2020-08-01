@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, Button } from 'react-bootstrap';
+import { Form, Button } from 'react-bootstrap';         
 import { Redirect } from "react-router-dom";
 import axios from "axios";
 
@@ -14,7 +14,7 @@ class Signup extends Component {
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
         // const history = useHistory();
-        
+
     };
 
     handleChange(event) {
@@ -34,7 +34,7 @@ class Signup extends Component {
                 console.log(response)
                 if (!response.data.errmsg) {
                     console.log("successful signup");
-                    window.location="/homepage";
+                    window.location = "/homepage";
                     // <Redirect to="/homepage"/>
                     // this.props.history.push("/homepage");   
                     // this.getSnapshotBeforeUpdate({
@@ -61,13 +61,13 @@ class Signup extends Component {
                 <Form className="signupSheet">
                     <Form.Group controlId="formBasicEmail" className="usernameLine">
                         <Form.Label>Create Username</Form.Label>
-                        <Form.Control type="input"  name = "username" placeholder="Enter username" value={this.state.username} onChange={this.handleChange} />
+                        <Form.Control type="input" name="username" placeholder="Enter username" value={this.state.username} onChange={this.handleChange} />
                     </Form.Group>
 
                     <Form.Group controlId="formBasicPassword" className="usernameLine">
                         <Form.Label>Password</Form.Label>
                         {/* {console.log(this.state.password)} */}
-                        <Form.Control type="password"  name = "password" placeholder="Password" value={this.state.password} onChange={this.handleChange} />
+                        <Form.Control type="password" name="password" placeholder="Password" value={this.state.password} onChange={this.handleChange} />
                     </Form.Group>
                     <Button variant="primary" type="submit" onClick={this.handleSubmit}>
                         Submit

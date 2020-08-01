@@ -28,7 +28,7 @@ app.use(passport.session());
 
 
 // mongoose.connect("mongodb+srv://dbGoals:Goals@cluster0.scopj.mongodb.net/dbGoals?retryWrites=true&w=majority");
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/goalsdb";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://127.0.0.1/goalsdb";
 mongoose.connect(MONGODB_URI, {useNewUrlParser: true});
 
 app.listen(PORT, function () {
