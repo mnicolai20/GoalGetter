@@ -33,18 +33,16 @@ class LoginForm extends Component {
             .then(response => {
                 console.log(response)
                 if (response.status === 200) {
-                    this.props.updateUser({
-                        loggedIn: true,
-                        username: response.data.username
-                    })
                     this.setState({
-                        redirectTo: "/"
+                        redirectTo: "/homepage"
                     })
                 }
             }).catch(error => {
                 console.log(error);
             })
     }
+
+
 
     render() {
         if (this.state.redirectTo) {

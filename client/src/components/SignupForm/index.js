@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Form, Button } from 'react-bootstrap';
-import { Redirect } from "react-router-dom";
+// import { Redirect } from "react-router-dom";
 import axios from "axios";
 
 class Signup extends Component {
