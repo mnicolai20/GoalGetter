@@ -38,13 +38,15 @@ class LoginForm extends Component {
                         username: response.data.username
                     })
                     this.setState({
-                        redirectTo: "/"
+                        redirectTo: "/homepage"
                     })
                 }
             }).catch(error => {
                 console.log(error);
             })
     }
+
+
 
     render() {
         if (this.state.redirectTo) {
