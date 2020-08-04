@@ -18,16 +18,17 @@ module.exports = {
             .catch(err => res.status(422).json(err));
     },
     create: function (req, res) {
-        console.log(req.body);
-
+        console.log('Here')
+        console.log(req)
         //
         db.Goals
             .create(req.body)
-            .then(dbModel => {
-               console.log(dbModel); res.json(dbModel)})
-                
-            .catch(err => 
-               {console.log(err); res.status(422).json(err)});
+            .then(dbModel =>{
+                console.log("response obj")
+                console.log(dbModel)
+                res.json(dbModel)
+            })
+            .catch(err => res.status(422).json(err));
     },
     update: function (req, res) {
         db.Goals
