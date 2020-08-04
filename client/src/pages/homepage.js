@@ -33,7 +33,7 @@ function Homepage() {
                     return (
                         <div key={goal._id}>
                             <p>{goal.title}</p>
-
+                       </div>
                     )
                 })
             }
