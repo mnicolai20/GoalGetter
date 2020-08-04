@@ -15,7 +15,7 @@ module.exports = {
     },
     create: function (req, res) {
         console.log('Here')
-        console.log(typeof req.body)
+        console.log(req)
         //
         db.Goals
             .create(req.body)
