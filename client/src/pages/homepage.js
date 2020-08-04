@@ -16,7 +16,9 @@ function Homepage() {
             .then(newGoalsValue => {
                 setGoals(newGoalsValue)
             })
-            .catch(function (err) {
+
+            .catch(function(err) {
+
                 console.log(err)
             })
 
@@ -31,7 +33,7 @@ function Homepage() {
                     return (
                         <div key={goal._id}>
                             <p>{goal.title}</p>
-                        </div>
+
                     )
                 })
             }
