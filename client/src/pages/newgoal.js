@@ -33,31 +33,35 @@ class NewGoal extends React.Component {
                 <div className="form-group">
                     <label>categories</label>
                     <select multiple  name= "category" className="form-control" id="exampleFormControlSelect2">
-                        <optgroup label='health'>
+                        <optgroup label='Health'>
                             <option value="sleep">Sleep</option>
                             <option value="nutrition">Nutrition</option>
                             <option value= "stress-relief">Stress Relief</option>
                         </optgroup>
 
-                        <optgroup label='travel'>
-                            <option value= "the-u.s">The U.S</option>
-                            <option value= 'europe'>Europe</option>
-                            <option value= 'asian'>Asia</option>
+                        <optgroup label='Travel'>
+                            <option value= "North America">North America</option>
+                            <option value= "Central/South America">Central/South America</option>
+                            <option value= "Africa">Africa</option>
+                            <option value= 'Europe'>Europe</option>
+                            <option value= 'Australia/Oceania'>Australia/Oceania</option>
+                            <option value= 'Asia'>Asia</option>
+                            <option value= 'Antarctica'>Antarctica</option>
                         </optgroup>
 
-                        <optgroup label='fitness'>
+                        <optgroup label='Fitness'>
                             <option value= 'running'>Running</option>
                             <option value= 'weight-training'>Weight Training</option>
                             <option value='specialevents'>Special Events</option>
                         </optgroup>
 
-                        <optgroup label='personal finance'>
+                        <optgroup label='Personal Fitness'>
                             <option value='investments'>Investments</option>
                             <option value='savings'>Saving</option>
                             <option value='spending'>Spending</option>
                         </optgroup>
 
-                        <optgroup label='business'>
+                        <optgroup label='Business'>
                             <option value='networking'>Networking Events</option>
                             <option value='ideas'>Ideas</option>
                             <option value='mentoring'>Mentoring</option>
