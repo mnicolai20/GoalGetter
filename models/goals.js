@@ -16,6 +16,6 @@ const newGoalSchema = new Schema({
     },
 });
 
-const newGoal = mongoose.model("newGoal", newGoalSchema);
+const Goals = mongoose.model("Goals", newGoalSchema);
 
-module.exports = newGoal;
+module.exports = Goals;

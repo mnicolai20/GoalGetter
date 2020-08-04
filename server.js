@@ -18,9 +18,7 @@ if (process.env.NODE_ENV === "production") {
   // Send every request to the React app
   // Define any API routes before this runs
   
-  app.get("*", function(req, res) {
-    res.sendFile(path.join(__dirname, "./client/build/index.html"));
-  }); 
+
   // We need to use sessions to keep track of our user's login status
   app.use(cookie());
   app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
@@ -29,6 +27,9 @@ if (process.env.NODE_ENV === "production") {
   const routes = require("./routes");
   app.use(routes);
 
+  app.get("*", function(req, res) {
+    res.sendFile(path.join(__dirname, "./client/build/index.html"));
+  }); 
 
 // mongoose.connect("mongodb+srv://dbGoals:Goals@cluster0.scopj.mongodb.net/dbGoals?retryWrites=true&w=majority");
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://127.0.0.1/goalsdb";
