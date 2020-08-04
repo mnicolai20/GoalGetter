@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Hero from "../components/Homepage";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import GoalsList from "../components/Goalslist/goalslist";
 
 function Homepage() {
     const [goals, setGoals] = useState([]);
@@ -15,7 +16,9 @@ function Homepage() {
             .then(newGoalsValue => {
                 setGoals(newGoalsValue)
             })
+
             .catch(function(err) {
+
                 console.log(err)
             })
 
@@ -30,7 +33,7 @@ function Homepage() {
                     return (
                         <div key={goal._id}>
                             <p>{goal.title}</p>
-                        </div> 
+
                     )
                 })
             }
@@ -56,6 +59,7 @@ function Homepage() {
                     </Col>
                 </Row>
                 <Row>
+                    <GoalsList goals={goals} />
                     {/* <Col size="md-12">
                             <input type="text"></input>
                             <button>You got this!!!</button>
