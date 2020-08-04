@@ -18,7 +18,7 @@ class NewGoal extends React.Component {
            body: JSON.stringify({
             title: document.querySelector('input[name="title"]').value,
             category: document.querySelector('select[name="category"]').value,
-            description: document.querySelector('textarea[name="description"]').innerText,
+            description: document.querySelector('textarea[name="description"]').value,
            })
        })
 
