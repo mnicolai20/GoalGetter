@@ -1,11 +1,39 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Hero from "../components/Homepage";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function Homepage() {
+    const [goals, setGoals] = useState([]);
+
+    useEffect(() => {
+        // make the fetch here
+        fetch('/api/goals')
+            .then(res => {
+                return res.json()
+            })
+            .then(newGoalsValue => {
+                setGoals(newGoalsValue)
+            })
+            .catch(function(err) {
+                console.log(err)
+            })
+
+        // set the goals state 
+
+    }, []);
+
     return (
         <div>
+            {
+                goals.map(goal => {
+                    return (
+                        <div key={goal._id}>
+                            <p>{goal.title}</p>
+                        </div> 
+                    )
+                })
+            }
             <Hero backgroundImage="./images/createGs1.jpg"></Hero>
             <Container style={{ marginTop: 30 }}>
                 <Row>
