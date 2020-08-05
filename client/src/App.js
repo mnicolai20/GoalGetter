@@ -12,20 +12,20 @@ import axios from "axios";
 
 class App extends Component {
  
-  componentWillMount(){
-    this.getLoginStatus()
-  }
+  // componentWillMount(){
+  //   this.getLoginStatus()
+  // }
 
-  getLoginStatus(){
-    axios.get("/auth/user_data")
-    .then(data => {
-      if(data.username){
-        return this.setState({isLoggedIn: true})
-      }
-    }).catch(err => {
-      console.log(err);
-    })
-  }
+  // getLoginStatus(){
+  //   axios.get("/auth/user_data")
+  //   .then(data => {
+  //     if(data.username){
+  //       return this.setState({isLoggedIn: true})
+  //     }
+  //   }).catch(err => {
+  //     console.log(err);
+  //   })
+  // }
 
   render(){
     return (
