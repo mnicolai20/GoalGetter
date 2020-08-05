@@ -68,7 +68,6 @@ class LoginForm extends Component {
                                 Sign Up!
                     </Button>
                         </Form.Group>
-
                     </Form>
                 </div>
             )
