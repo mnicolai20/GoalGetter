@@ -28,15 +28,7 @@ function Homepage() {
 
     return (
         <div>
-            {
-                goals.map(goal => {
-                    return (
-                        <div key={goal._id}>
-                            <p>{goal.title}</p>
-                       </div>
-                    )
-                })
-            }
+           
             <Hero backgroundImage="./images/createGs1.jpg"></Hero>
             <Container style={{ marginTop: 30 }}>
                 <Row>
