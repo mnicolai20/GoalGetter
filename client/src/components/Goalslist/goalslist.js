@@ -1,5 +1,11 @@
 import React, { Component } from "react";
+import "./style.css";
 
+const styling = {
+    border: "solid",
+    borderRadius: "5px",
+    borderColor: "black"
+}
 
 function GoalsList({ goals }) {
 
@@ -8,7 +14,7 @@ function GoalsList({ goals }) {
     });
 
     return (
-        <ul>{updatedList}</ul>
+        <ul className="list" style={styling}>{updatedList}</ul>
     );
 }
 export default GoalsList;
