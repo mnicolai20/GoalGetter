@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-import {Link} from 'react-router-dom';
+import {Redirect} from 'react-router-dom';
 
 
 
@@ -11,7 +11,8 @@ class NewGoal extends React.Component {
         this.state = { 
             title: '',
             category: "",
-            description:""
+            description:"",
+            redirect: false
         }; // intializing state data is being in compoent so its intializing it
     }
 
@@ -26,7 +27,10 @@ class NewGoal extends React.Component {
 
         axios.post("/api/goals", payload).then((res)=>{
             //do something with res 
-            console.log(res)
+            console.log(res);
+            this.setState({
+                redirect: true
+            })
         })
         
     //    fetch('/api/goals', {
@@ -53,21 +57,13 @@ class NewGoal extends React.Component {
         this.setState({category: e.target.value})
     }
      
-     ActionLink() {
-        function onSubmit(e) {
-          e.preventDefault();
-          console.log('The link was clicked.');
-        }
-      
-        return (
-          <a href="/homepage" onClick={onSubmit}>
-            submit
-          </a>
-        );
-      }
+    
    
 
     render() { // renders bootstrap html
+        if(this.state.redirect){
+           return  <Redirect to="/homepage"/>;
+        }
         return (
             <form onSubmit = {this.createGoal} >
                 <div className="form-group">
@@ -124,7 +120,7 @@ class NewGoal extends React.Component {
                     <label>description</label>
                     <textarea className="form-control" onChange={this.handleChange} name= "description" id="exampleFormControlTextarea1" rows="3" />
                 </div>
-                <button onClick={this.onSubmit} className="btn btn-primary">Create new goal</button>
+                <button onClick={this.createGoal} className="btn btn-primary">Create new goal</button>
 
             </form>
 
