@@ -1,5 +1,8 @@
 import React from 'react';
-import axios from 'axios'
+import axios from 'axios';
+
+import {Link} from 'react-router-dom';
+
 
 
 class NewGoal extends React.Component {
@@ -49,6 +52,20 @@ class NewGoal extends React.Component {
     handleClick = (e) =>{
         this.setState({category: e.target.value})
     }
+     
+     ActionLink() {
+        function onSubmit(e) {
+          e.preventDefault();
+          console.log('The link was clicked.');
+        }
+      
+        return (
+          <a href="/homepage" onClick={onSubmit}>
+            submit
+          </a>
+        );
+      }
+   
 
     render() { // renders bootstrap html
         return (
@@ -107,7 +124,7 @@ class NewGoal extends React.Component {
                     <label>description</label>
                     <textarea className="form-control" onChange={this.handleChange} name= "description" id="exampleFormControlTextarea1" rows="3" />
                 </div>
-                <button type="submit" className="btn btn-primary">Create new goal</button>
+                <button onClick={this.onSubmit} className="btn btn-primary">Create new goal</button>
 
             </form>
 
