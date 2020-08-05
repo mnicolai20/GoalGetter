@@ -3,14 +3,14 @@ import "./style.css";
 
 const styling = {
     border: "solid",
-    borderRadius: "5px",
+    borderWidth: "5px",
     borderColor: "black"
 }
 
 function GoalsList({ goals }) {
 
     const updatedList = goals.map((goal,i) => {
-        return <li key= {i}>{goal.title}</li>;
+        return <li key= {i}><a href={`/joingoal/${goal._id}`}>{goal.title}</a></li>;
     });
 
     return (

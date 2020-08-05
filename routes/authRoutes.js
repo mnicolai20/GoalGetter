@@ -107,7 +107,8 @@ const app= express.Router();
       // Sending back a password, even a hashed password, isn't a good idea
       res.json({
         username: req.user.username,
-        id: req.user.id
+        id: req.user._id,
+        goals: req.user.goals
       });
     }
   });
