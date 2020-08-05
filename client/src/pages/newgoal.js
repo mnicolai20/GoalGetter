@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-import {Link} from 'react-router-dom';
+//import {Redirect} from 'react-router-dom';
 
 
 
@@ -53,18 +53,14 @@ class NewGoal extends React.Component {
         this.setState({category: e.target.value})
     }
      
-     ActionLink() {
-        function onSubmit(e) {
-          e.preventDefault();
-          console.log('The link was clicked.');
-        }
-      
-        return (
-          <a href="/homepage" onClick={onSubmit}>
-            submit
-          </a>
-        );
-      }
+     App({ history }) {
+        function onSubmit() {
+         history.push('/homepage');
+       }
+      return (
+        <button onClick={onSubmit}>Click me</button>
+      );
+    } 
    
 
     render() { // renders bootstrap html
