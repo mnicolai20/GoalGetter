@@ -37,6 +37,13 @@ function Homepage() {
                             {/* <h1>Welcome to</h1> */}
                             <img src="../images/logo5.png" alt="Goal Getter Logo" className="logo"></img>
                         </Col>
+                <Row>
+                    <GoalsList goals={goals} />
+                    {/* <Col size="md-12">
+                            <input type="text"></input>
+                            <button>You got this!!!</button>
+                    </Col> */}
+                </Row>
                         <Link to="/newgoals">
                             <Button variant="light" size="lg" block className='createBtn'>
                                 Create New Goals
@@ -49,13 +56,6 @@ function Homepage() {
                             Connect with Othe   r Users
                     </Button>
                     </Col>
-                </Row>
-                <Row>
-                    <GoalsList goals={goals} />
-                    {/* <Col size="md-12">
-                            <input type="text"></input>
-                            <button>You got this!!!</button>
-                    </Col> */}
                 </Row>
             </Container>
 
