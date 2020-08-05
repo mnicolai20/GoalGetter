@@ -1,4 +1,7 @@
 .list{
-    border: black;
+    border: rgb(221, 38, 38);
     border-width: 30px;
+    height: 115px;
+    width: 200px;
+    overflow-y: scroll;
 }
