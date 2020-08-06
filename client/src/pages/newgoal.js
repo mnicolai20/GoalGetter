@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-
+import Nav from "../components/Nav";
 import {Redirect} from 'react-router-dom';
 
 
@@ -65,11 +65,14 @@ class NewGoal extends React.Component {
    
 
     render() { // renders bootstrap html
+        
+        
         if(this.state.redirect){
            return  <Redirect to="/homepage"/>;
         }
         return (
             <form onSubmit = {this.createGoal} >
+                <Nav />
                 <div className="form-group">
                     <label><h4>Title of Your New Goal</h4></label>
                     <input type="text" name="title" onChange={this.handleChange} className="form-control" id="formGroupExampleInput" placeholder="New Goal" />

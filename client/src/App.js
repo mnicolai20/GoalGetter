@@ -58,9 +58,9 @@ class App extends Component {
       <Router>
         <div>
           <Nav>
-            <button className="logout" onClick={this.logOut} > Log Out </button>
+          <button className="logout" onClick={this.logOut}>Log out</button>
           </Nav>
-          {/* <button className="logout" onClick={this.logOut}>Log out</button> */}
+          
           <Route exact path="/" component={LogIn} />
           <Route exact path="/signup" component={SignUp} />
           <Route exact path="/newgoals" component={NewGoals} />
