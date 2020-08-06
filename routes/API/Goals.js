@@ -3,7 +3,7 @@ const goalsController = require("../../controller/goalsController");
 
 // Matches with "/api/goals"
 router.route("/")
-    .get(goalsController.findAll)
+    .get(goalsController.findAllUserGoals)
     .post(goalsController.create);
 
 // Matches with "/api/goals/:id"

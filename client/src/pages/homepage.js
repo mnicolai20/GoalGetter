@@ -6,6 +6,7 @@ import GoalsList from "../components/Goalslist/goalslist";
 
 function Homepage() {
     const [goals, setGoals] = useState([]);
+    const [user, setUser] = useState([]);
 
     useEffect(() => {
         // make the fetch here
@@ -14,7 +15,9 @@ function Homepage() {
                 return res.json()
             })
             .then(newGoalsValue => {
-                setGoals(newGoalsValue)
+
+                setGoals(newGoalsValue[0].goals)
+                setUser(newGoalsValue)
             })
 
             .catch(function(err) {

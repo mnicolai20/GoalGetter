@@ -23,7 +23,18 @@ const app= express.Router();
     console.log(req.body)
     req.body.password = await bcrypt.hash(req.body.password, 10)
     db.User.create(req.body)
-      .then(results => res.json(results))
+      .then(user =>{
+        req.login(user, function (err) {
+          if ( ! err ){
+
+              res.json(user);
+          } else {
+              //handle error
+              res.json(err)
+          }
+      })
+        res.json(results)
+        })
       .catch(err => res.json(err))
 
 
