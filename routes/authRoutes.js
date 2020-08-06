@@ -122,6 +122,11 @@ const app= express.Router();
         goals: req.user.goals
       });
     }
+    router.post('/joingoal', function (req, res) {
+      // create goal
+      res.json(goalId)
+   });
+
   });
   
   module.exports=app
