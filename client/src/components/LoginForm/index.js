@@ -7,11 +7,11 @@ import "./style.css";
 
 const myImage = require("./logo3.png");
 const divStyle = {
-    height: "800px",
+    height: "850px",
     width: "100%",
     backgroundImage: "url(" + myImage + ")",
     backgroundSize: "contain",
-    backgroundPosition: "center",
+    backgroundPosition: "bottom",
     backgroundRepeat: "no-repeat",
     backgroundColor: "black"
 }

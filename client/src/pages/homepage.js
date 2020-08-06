@@ -53,7 +53,7 @@ function Homepage() {
                             View/Update Goals
                     </Button>
                         <Button variant="dark" size="lg" block className='connectBtn'>
-                            Connect with Othe   r Users
+                            Connect with Other Users
                     </Button>
                     </Col>
                 </Row>
