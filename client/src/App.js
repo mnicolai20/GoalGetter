@@ -7,8 +7,7 @@ import LogIn from "./pages/login";
 import UpdateGoal from "./pages/updategoal";
 import Homepage from "./pages/homepage";
 import Joingoal from "./pages/joingoal";
-// import axios from "axios";
-
+import axios from "axios";
 
 class App extends Component {
  constructor (){
