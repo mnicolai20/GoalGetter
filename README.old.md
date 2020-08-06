@@ -32,6 +32,14 @@ We seek to connect users who want to keep track of their disparate goals and con
 ------------------
 ## Screenshots <a name="screenshots"></a>
 
+![scrnsht1](https://user-images.githubusercontent.com/59940368/89593598-909bc400-d81d-11ea-88fd-c40ba8cd4b11.png)
+![scrnsht2](https://user-images.githubusercontent.com/59940368/89593613-95f90e80-d81d-11ea-8084-bff2522e7873.png)
+![scrnsht3](https://user-images.githubusercontent.com/59940368/89593618-985b6880-d81d-11ea-813e-ede8b114c327.png)
+![scrnsht4](https://user-images.githubusercontent.com/59940368/89593625-9abdc280-d81d-11ea-8c98-982cf114dd0c.png)
+![scrnsht5](https://user-images.githubusercontent.com/59940368/89593630-9e514980-d81d-11ea-9e72-d0858e240691.png)
+![scrnsht6](https://user-images.githubusercontent.com/59940368/89593631-9ee9e000-d81d-11ea-8243-9d88167bee7a.png)
+
+
 ------------------
 ## Technologies <a name="technologies"></a>
 
