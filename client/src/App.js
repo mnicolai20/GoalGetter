@@ -8,14 +8,29 @@ import UpdateGoal from "./pages/updategoal";
 import Homepage from "./pages/homepage";
 import Joingoal from "./pages/joingoal";
 import axios from "axios";
+// import {
+//   Collapse,
+//   Navbar,
+//   NavbarToggler,
+//   NavbarBrand,
+//   Nav,
+//   NavItem,
+//   NavLink,
+//   UncontrolledDropdown,
+//   DropdownToggle,
+//   DropdownMenu,
+//   DropdownItem,
+//   NavbarText
+// } from 'reactstrap';
+import Nav from "../src/components/Nav";
 
 class App extends Component {
- constructor (){
-   super ()
-   this.state = {
-     isLoggedin: null
-   }
- }
+  constructor() {
+    super()
+    this.state = {
+      isLoggedin: null
+    }
+  }
 
   // componentWillMount(){
   //   this.getLoginStatus()
@@ -32,20 +47,29 @@ class App extends Component {
   //   })
   // }
 
+  logOut = () => {
+    axios.get('/auth/logout').then((res) => {
+      window.location = "/"
+    })
+  }
 
-  render(){
+  render() {
     return (
       <Router>
         <div>
+          <Nav>
+          <button className="logout" onClick={this.logOut}>Log out</button>
+          </Nav>
+          
           <Route exact path="/" component={LogIn} />
           <Route exact path="/signup" component={SignUp} />
           <Route exact path="/newgoals" component={NewGoals} />
           <Route exact path="/updategoal" component={UpdateGoal} />
           <Route exact path="/homepage" component={Homepage} />
-          <Route path="/joingoal/:id" component={Joingoal} /> 
-  
+          <Route path="/joingoal/:id" component={Joingoal} />
+
         </div>
-        {this.state.isLoggedIn ? <h5>Logged In</h5>: null} 
+        {this.state.isLoggedIn ? <h5>Logged In</h5> : null}
       </Router>
     );
   }

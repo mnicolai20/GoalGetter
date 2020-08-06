@@ -7,10 +7,10 @@ const pageStyle = {
     textAlign: "left",
     backgroundImage: "url(https://squarmilner.com/wp-content/uploads/2017/08/Together-We-Can-Achieve-More.jpg)",
     backgroundSize: "fit",
-    height: "650px",
+    height: "600px",
     backgroundPosition: "bottom",
     backgroundRepeat: "no-repeat",
-    backgroundColor: "black"
+    backgroundColor: "black",
 }
 
 const btnStyle = {
