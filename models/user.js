@@ -15,9 +15,15 @@ const userSchema = new Schema({
           type: Schema.Types.ObjectId,
           ref: "Goals"
         }
+      ],
+      join: [
+        {
+          type: Schema.Types.ObjectId,
+          ref: "Goal"
+        }
       ]
 });
 
 const User = mongoose.model("User", userSchema);
 
-module.exports = User;
+module.exports = User; //specidic for user

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./style.css";
 
 const styling = {
@@ -12,6 +12,7 @@ function GoalsList({ goals }) {
     const updatedList = goals.map((goal,i) => {
         return <li key= {i}><a href={`/joingoal/${goal._id}`}>{goal.title}</a></li>;
     });
+    
     
     
 
