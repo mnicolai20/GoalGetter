@@ -65,6 +65,8 @@ class NewGoal extends React.Component {
    
 
     render() { // renders bootstrap html
+        
+        
         if(this.state.redirect){
            return  <Redirect to="/homepage"/>;
         }
