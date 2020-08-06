@@ -16,6 +16,10 @@ class NewGoal extends React.Component {
         }; // intializing state data is being in compoent so its intializing it
     }
 
+    componentDidMount(){
+        window.scrollTo(0,0)
+    }
+
     createGoal = (event)=> {
        event.preventDefault();
         const {title, category, description} = this.state

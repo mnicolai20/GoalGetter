@@ -32,12 +32,17 @@ class App extends Component {
   //     console.log(err);
   //   })
   // }
+ logOut = () =>{
+    axios.get('/auth/logout').then((res) =>{
+      window.location= "/"
+    })
+ } 
 
   render(){
     return (
       <Router>
         <div>
-  
+        <button onClick={this.logOut}>Log out</button>
           <Route exact path="/" component={LogIn} />
           <Route exact path="/signup" component={SignUp} />
           <Route exact path="/newgoals" component={NewGoals} />

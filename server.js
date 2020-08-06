@@ -32,7 +32,9 @@ if (process.env.NODE_ENV === "production") {
   }); 
 
 // mongoose.connect("mongodb+srv://dbGoals:Goals@cluster0.scopj.mongodb.net/dbGoals?retryWrites=true&w=majority");
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://test:Matthew3@ds027799.mlab.com:27799/heroku_1np29phj";
+const MONGODB_URI = process.env.MONGODB_URI || 
+// "mongodb://localhost/goalsdb"
+"mongodb://test:Matthew3@ds027799.mlab.com:27799/heroku_1np29phj";
 mongoose.connect(MONGODB_URI, {useNewUrlParser: true});
 
 app.listen(PORT, function () {
