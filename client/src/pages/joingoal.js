@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import Nav from "../components/Nav";
 
 const pageStyle = {
     textAlign: "left",
@@ -119,6 +120,7 @@ class JoinGoal extends Component{
     render() {
         return (
             <form style={pageStyle}>
+                <Nav />
                 <div className="form-group titleDiv">
                  <h1 className="heading" style={titleStyle}>Goal </h1>
                     <h2 style={inputStyle}>{this.state.title}</h2>
