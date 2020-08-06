@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
+import {Redirect} from 'react-router-dom';
+
 
 const pageStyle = {
     textAlign: "left",
@@ -48,7 +50,8 @@ class JoinGoal extends Component{
             username: "",
             userId: "",
             userGoals: [],
-            redirectTo: null
+            redirectTo: null,
+            
         };
     }
     //joinGoal(){
@@ -102,10 +105,10 @@ class JoinGoal extends Component{
         return (this.state.userGoals.includes(this.state.goalId))
     }
 
-    handleSUbmit = (event) => {
+    handleSubmit = (event) => {
         event.preventDefault();
 
-        axios.post("/auth/user_data", {
+        axios.post("/auth/joingoal", {
             userGoals:this.state.goals
         })
         .then(response => {
@@ -117,6 +120,8 @@ class JoinGoal extends Component{
     }
 
     render() {
+        
+
         return (
             <form style={pageStyle}>
                 <div className="form-group titleDiv">
@@ -133,7 +138,7 @@ class JoinGoal extends Component{
                 </div>
                 { this.userHasGoal() ?
                 <button className="abandon" type="submit" style={{marginLeft: "25%"}}>Abdandon Goal!</button>: 
-                <button className="join" type="submit" onClick={this.handleSUbmit} style={{marginLeft: "25%"}}>Join Goal!</button>
+                <button className="join" type="submit" onClick={this.handleSubmit} style={{marginLeft: "25%"}}>Join Goal!</button>
                 }
             </form>
         )
