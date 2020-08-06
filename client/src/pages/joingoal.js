@@ -81,13 +81,14 @@ class JoinGoal extends Component{
 
     fetchUser = async () => {
         let {data} = await axios.get("/auth/user_data")
+        console.log(data);
         
         this.setState({
             username: data.username || "",
             userId: data.id || "",
             userGoals: data.goals || []
         })
-        this.fetchGoal(data);
+       // this.fetchGoal(data);
     }
 
     userHasGoal = () => {
