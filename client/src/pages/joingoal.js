@@ -58,6 +58,7 @@ class JoinGoal extends Component{
             userId: data.id || "",
             userGoals: data.goals || []
         })
+        this.fetchGoal(data);
     }
 
     userHasGoal = () => {
