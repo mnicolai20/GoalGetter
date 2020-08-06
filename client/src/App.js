@@ -11,7 +11,13 @@ import Joingoal from "./pages/joingoal";
 
 
 class App extends Component {
- 
+ constructor (){
+   super ()
+   this.state = {
+     isLoggedin: null
+   }
+ }
+
   // componentWillMount(){
   //   this.getLoginStatus()
   // }
@@ -40,7 +46,7 @@ class App extends Component {
           <Route path="/joingoal/:id" component={Joingoal} /> 
   
         </div>
-        {this.state.isLoggedIn ? <h5>Logged In</h5>: null}
+        {this.state.isLoggedIn ? <h5>Logged In</h5>: null} 
       </Router>
     );
   }
