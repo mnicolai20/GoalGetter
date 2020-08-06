@@ -5,18 +5,22 @@ import axios from "axios";
 
 const pageStyle = {
     textAlign: "left",
-    backgroundImage: "url(https://lh3.googleusercontent.com/proxy/FcnkcVgmIjhCHPILXlfm1Xn23KLicrfcmWl-unWh3erRurztapJT5KIeW9raePzx1anyVIroy4vp2j_ryx6nzh3ERLnDdQAxhjBm0kPgTwUieuzumX235uQ)",
-    backgroundSize: "cover",
-    height: "800px",
-    margin: "0",
+    backgroundImage: "url(https://squarmilner.com/wp-content/uploads/2017/08/Together-We-Can-Achieve-More.jpg)",
+    backgroundSize: "fit",
+    height: "650px",
+    backgroundPosition: "bottom",
     backgroundRepeat: "no-repeat",
-    position: "relative"
+    backgroundColor: "black"
 }
 
-const formStyle = {
-    backgroundColor: "rgba(52, 52, 52, 0.4)",
-    backgroundOpaque: "50%",
-    backgroundRadius: "10"
+const btnStyle = {
+    backgroundColor: "gold",
+    borderColor: "black",
+    color: "black"
+}
+
+const textStyle = {
+    color: "white"
 }
 
 class Signup extends Component {
@@ -73,21 +77,21 @@ class Signup extends Component {
     render() {
         return (
             <div className="page" style={pageStyle}>
-                <div className="signupForm" style={formStyle}>
-                <h4 className="title">Sign up</h4>
+                <div className="signupForm">
+                <h4 className="title" style={textStyle}>Sign up</h4>
                 <Form className="signupSheet">
                     <Form.Group controlId="formBasicEmail" className="usernameLine">
-                        <Form.Label>Create Username</Form.Label>
+                        <Form.Label style={textStyle}>Create Username</Form.Label>
                         <Form.Control type="input"  name = "username" placeholder="Enter username" value={this.state.username} onChange={this.handleChange} />
                     </Form.Group>
 
                     <Form.Group controlId="formBasicPassword" className="usernameLine">
-                        <Form.Label>Password</Form.Label>
+                        <Form.Label style={textStyle}>Password</Form.Label>
                         {/* {console.log(this.state.password)} */}
                         <Form.Control type="password"  name = "password" placeholder="Password" value={this.state.password} onChange={this.handleChange} />
                     </Form.Group>
-                    <Button variant="primary" type="submit" onClick={this.handleSubmit}>
-                        Submit
+                    <Button variant="primary" type="submit" style={btnStyle} onClick={this.handleSubmit}>
+                        Sign Up!
             </Button>
                 </Form>
                 </div>

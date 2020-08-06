@@ -84,7 +84,7 @@ class LoginForm extends Component {
                             <Form.Control type="password"  name= "password" placeholder="Password" value={this.state.password} onChange={this.handleChange} />
                            <hr></hr>
                             <Button variant="primary" type="submit" onClick={this.handleSubmit} className="submit sub1" style={submitStyle}>
-                                Submit
+                                Sign In!
                     </Button>
                             <Button variant="danger" type="submit" href="/signup" className="submit sub2">
                                 Sign Up!
