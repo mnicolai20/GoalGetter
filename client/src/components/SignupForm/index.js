@@ -13,6 +13,12 @@ const pageStyle = {
     backgroundColor: "black"
 }
 
+const btnStyle = {
+    backgroundColor: "gold",
+    borderColor: "black",
+    color: "black"
+}
+
 const textStyle = {
     color: "white"
 }
@@ -84,8 +90,8 @@ class Signup extends Component {
                         {/* {console.log(this.state.password)} */}
                         <Form.Control type="password"  name = "password" placeholder="Password" value={this.state.password} onChange={this.handleChange} />
                     </Form.Group>
-                    <Button variant="primary" type="submit" onClick={this.handleSubmit}>
-                        Submit
+                    <Button variant="primary" type="submit" style={btnStyle} onClick={this.handleSubmit}>
+                        Sign Up!
             </Button>
                 </Form>
                 </div>
