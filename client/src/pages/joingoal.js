@@ -15,6 +15,10 @@ class JoinGoal extends Component{
             redirectTo: null
         };
     }
+    //joinGoal(){
+//this.setState
+
+  //  }
 
     // componentWillMount(){
     //     this.getLoginStatus()

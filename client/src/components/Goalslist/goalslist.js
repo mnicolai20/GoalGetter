@@ -14,6 +14,7 @@ function GoalsList({ goals }) {
     });
     
     
+    
 
     return (
         <ul className="list" style={styling}>{updatedList}</ul>
