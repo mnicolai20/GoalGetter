@@ -1,11 +1,12 @@
 import React from "react";
 
-function Nav() {
+function Nav(props) {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-info">
       <a className="navbar-brand" href="/">
-        React Reading List
+        Welcome to Goal-Getter!
       </a>
+      {props.children}
     </nav>
   );
 }
