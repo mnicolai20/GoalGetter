@@ -3,6 +3,7 @@ import Hero from "../components/Homepage";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import GoalsList from "../components/Goalslist/goalslist";
+import Nav from "../components/Nav";
 
 function Homepage() {
     const [goals, setGoals] = useState([]);
@@ -31,7 +32,7 @@ function Homepage() {
 
     return (
         <div>
-           
+           <Nav />
             <Hero backgroundImage="./images/createGs1.jpg"></Hero>
             <Container style={{ marginTop: 30 }}>
                 <Row>
