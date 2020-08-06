@@ -5,6 +5,28 @@ import { Form } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import "./style.css";
 
+const myImage = require("./logo3.png");
+const divStyle = {
+    height: "800px",
+    width: "100%",
+    backgroundImage: "url(" + myImage + ")",
+    backgroundSize: "contain",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundColor: "black"
+}
+
+const headings = {
+    color: "white",
+    textDecoration: "underline"
+}
+
+const submitStyle = {
+    backgroundColor: "gold",
+    borderColor: "black",
+    color: "black"
+}
+
 class LoginForm extends Component {
     constructor() {
         super()
@@ -49,19 +71,19 @@ class LoginForm extends Component {
             return <Redirect to={{ pathname: this.state.redirectTo }} />
         } else {
             return (
-                <div className="page">
-                    <h4 className="title">Log In</h4>
+                <div className="page" style={divStyle}>
+                    <h4 className="title" style={headings}>Log In</h4>
                     <Form>
                         <Form.Group controlId="formBasicEmail" className="usernameLine">
-                            <Form.Label>Username</Form.Label>
+                            <Form.Label style={headings}>Username</Form.Label>
                             <Form.Control type="input" name= "username" placeholder="Enter username" value={this.state.username} onChange={this.handleChange}/>
                         </Form.Group>
 
                         <Form.Group controlId="formBasicPassword" className="usernameLine">
-                            <Form.Label>Password</Form.Label>
+                            <Form.Label style={headings}>Password</Form.Label>
                             <Form.Control type="password"  name= "password" placeholder="Password" value={this.state.password} onChange={this.handleChange} />
                            <hr></hr>
-                            <Button variant="primary" type="submit" onClick={this.handleSubmit} className="submit sub1">
+                            <Button variant="primary" type="submit" onClick={this.handleSubmit} className="submit sub1" style={submitStyle}>
                                 Submit
                     </Button>
                             <Button variant="danger" type="submit" href="/signup" className="submit sub2">

@@ -3,6 +3,22 @@ import { Form, Button } from 'react-bootstrap';
 // import { Redirect } from "react-router-dom";
 import axios from "axios";
 
+const pageStyle = {
+    textAlign: "left",
+    backgroundImage: "url(https://lh3.googleusercontent.com/proxy/FcnkcVgmIjhCHPILXlfm1Xn23KLicrfcmWl-unWh3erRurztapJT5KIeW9raePzx1anyVIroy4vp2j_ryx6nzh3ERLnDdQAxhjBm0kPgTwUieuzumX235uQ)",
+    backgroundSize: "cover",
+    height: "800px",
+    margin: "0",
+    backgroundRepeat: "no-repeat",
+    position: "relative"
+}
+
+const formStyle = {
+    backgroundColor: "rgba(52, 52, 52, 0.4)",
+    backgroundOpaque: "50%",
+    backgroundRadius: "10"
+}
+
 class Signup extends Component {
     constructor() {
         super()
@@ -56,7 +72,8 @@ class Signup extends Component {
 
     render() {
         return (
-            <div className="page">
+            <div className="page" style={pageStyle}>
+                <div className="signupForm" style={formStyle}>
                 <h4 className="title">Sign up</h4>
                 <Form className="signupSheet">
                     <Form.Group controlId="formBasicEmail" className="usernameLine">
@@ -73,6 +90,7 @@ class Signup extends Component {
                         Submit
             </Button>
                 </Form>
+                </div>
             </div>
         )
     }

@@ -23,6 +23,13 @@ const inputStyle = {
     marginLeft: "25%"
 }
 
+const descripStyle = {
+    marginTop: "3%",
+    color: "white",
+    marginLeft: "25%",
+    width: "40%"
+}
+
 const secStyle = {
     marginTop: "3%",
     color: "gold",
@@ -116,7 +123,7 @@ class JoinGoal extends Component{
                 </div>
                 <div className="descripDiv">
                     <h3 style={secStyle}>Description</h3>
-                    <p style={inputStyle}>{this.state.description}</p>
+                    <p style={descripStyle}>{this.state.description}</p>
                 </div>
                 { this.userHasGoal() ?
                 <button className="abandon" type="submit" style={{marginLeft: "25%"}}>Abdandon Goal!</button>: 
