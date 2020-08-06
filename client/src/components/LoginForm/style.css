@@ -5,6 +5,7 @@
 .usernameLine{
     padding-left: 35%;
     padding-right: 35%;
+    /* margin-top: 50px; */
 }
 
 .title{
@@ -14,9 +15,11 @@
 .sub1 {
     margin-left: 20%;
     margin-top: 10px;
+    opacity: .78;
 }
 
 .sub2 {
     margin-left: 15%;
     margin-top: 10px;
+    opacity: .78;
 }
