@@ -20,8 +20,7 @@ const titleStyle ={
 const inputStyle = {
     marginTop: "3%",
     color: "white",
-    marginLeft: "25%",
-    textDecoration: "underline"
+    marginLeft: "25%"
 }
 
 const secStyle = {
