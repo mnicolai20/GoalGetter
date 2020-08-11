@@ -32,7 +32,7 @@ function Homepage() {
 
     return (
         <div>
-           <Nav />
+           {/* <Nav /> */}
             <Hero backgroundImage="./images/createGs1.jpg"></Hero>
             <Container style={{ marginTop: 30 }}>
                 <Row>
