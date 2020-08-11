@@ -1,5 +1,5 @@
 import React from 'react';
-import Nav from "../components/Nav";
+// import Nav from "../components/Nav";
 import DeleteBtn from '../components/DeleteBtn';
 
 //import NewGoal from '.pages/newgoal';
@@ -19,7 +19,7 @@ class UpdateGoal extends React.Component {
     render() { // renders bootstrap html
         return (
             <form>
-                <Nav />
+                {/* <Nav /> */}
                 <div className="form-group">
                     <label>Title of new goal</label>
                     <input type="text" className="form-control" id="formGroupExampleInput" placeholder="New Goal" />
