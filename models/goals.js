@@ -17,7 +17,12 @@ const newGoalSchema = new Schema({
     createdBy: {
         type: Schema.Types.ObjectId,
         ref: "User"
-    }
+    },
+    users: {
+        type: [String],
+         ref: "User",
+         default: []
+    },
 });
 
 const Goals = mongoose.model("Goals", newGoalSchema);

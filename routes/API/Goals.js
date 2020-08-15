@@ -13,4 +13,6 @@ router
     .put(goalsController.update)
     .delete(goalsController.remove);
 
+router.get('/joined/:userId', goalsController.findAllJoinedGoals);
+
 module.exports = router;

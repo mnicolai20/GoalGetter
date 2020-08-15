@@ -110,7 +110,8 @@ class JoinGoal extends Component{
         event.preventDefault();
 
         axios.post("/auth/joingoal", {
-            userGoals:this.state.goals
+                userId: this.state.userId,
+                goalId: this.props.match.params.id
         })
         .then(response => {
             console.log(response)
