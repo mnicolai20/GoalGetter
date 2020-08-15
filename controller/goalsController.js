@@ -4,7 +4,6 @@ module.exports = {
         console.log('Here')
         db.Goals
             .find({})
-            .sort({ date: -1 })
             .then(dbModel => res.json(dbModel))
             .catch(err => {
                 console.log(err)
@@ -12,12 +11,18 @@ module.exports = {
             });
     },
     findAllUserGoals: function (req, res) {
-        console.log('Here')
-        console.log(req)
         db.User
-            .find({_id:req.user._id})
+            .find({})
             .populate("goals")
-            .sort({ date: -1 })
+            .then(dbModel => res.json(dbModel))
+            .catch(err => {
+                console.log(err)
+                res.status(422).json(err)
+            });
+    },
+    findAllJoinedGoals: function(req, res) {
+
+        db.Goals.find({ users: req.params.userId })
             .then(dbModel => res.json(dbModel))
             .catch(err => {
                 console.log(err)
@@ -32,7 +37,6 @@ module.exports = {
     },
     create: function (req, res) {
         console.log('Here')
-        console.log(req)
         //
         const userId = req.user._id
         db.Goals

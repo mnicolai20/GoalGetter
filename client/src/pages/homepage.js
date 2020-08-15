@@ -7,6 +7,7 @@ import Nav from "../components/Nav";
 
 function Homepage() {
     const [goals, setGoals] = useState([]);
+    const [joinedGoals, setJoinedGoals] = useState([]);
     const [user, setUser] = useState([]);
 
     useEffect(() => {
@@ -21,18 +22,38 @@ function Homepage() {
                 setUser(newGoalsValue)
             })
 
-            .catch(function(err) {
+            .catch(function (err) {
 
                 console.log(err)
             })
 
+        
         // set the goals state 
 
     }, []);
 
+    useEffect(() => {
+        if (user.length > 0){
+        fetch('/api/goals/joined/' + user[0]._id)
+            .then(res => {
+                return res.json()
+            })
+            .then(newGoalsValue => {
+
+                setJoinedGoals(newGoalsValue)
+
+            })
+
+            .catch(function (err) {
+
+                console.log(err)
+            })
+        }
+    }, [user])
+    console.log(user)
     return (
         <div>
-           {/* <Nav /> */}
+            {/* <Nav /> */}
             <Hero backgroundImage="./images/createGs1.jpg"></Hero>
             <Container style={{ marginTop: 30 }}>
                 <Row>
@@ -41,13 +62,14 @@ function Homepage() {
                             {/* <h1>Welcome to</h1> */}
                             <img src="../images/logo5.png" alt="Goal Getter Logo" className="logo"></img>
                         </Col>
-                <Row>
-                    <GoalsList goals={goals} />
-                    {/* <Col size="md-12">
+                        <Row>
+                            <GoalsList goals={goals} />
+                            <GoalsList goals={joinedGoals} />
+                            {/* <Col size="md-12">
                             <input type="text"></input>
                             <button>You got this!!!</button>
                     </Col> */}
-                </Row>
+                        </Row>
                         <Link to="/newgoals">
                             <Button variant="light" size="lg" block className='createBtn'>
                                 Create New Goals
