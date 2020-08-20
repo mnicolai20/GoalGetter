@@ -53,7 +53,9 @@ module.exports = {
                     res.json(dbModel)
                 })
             })
-            .catch(err => res.status(422).json(err));
+            .catch(err => { console.log(err);
+            res.status(422).json(err)});
+
     },
     update: function (req, res) {
         db.Goals
@@ -66,6 +68,9 @@ module.exports = {
             .findById({ _id: req.params.id })
             .then(dbModel => dbModel.remove())
             .then(dbModel => res.json(dbModel))
-            .catch(err => res.status(422).json(err));
+            .catch(err => {
+                console.log(err)
+                res.status(422).json(err)
+            });
     }
 };

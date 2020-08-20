@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import DeleteBtn from "../DeleteBtn";
 
 const styling = {
     border: "solid",
@@ -10,7 +11,12 @@ const styling = {
 function GoalsList({ goals }) {
 
     const updatedList = goals.map((goal,i) => {
-        return <li key= {i}><a href={`/joingoal/${goal._id}`}>{goal.title}</a></li>;
+        return (
+            <li key= {i}>
+                <a href={`/joingoal/${goal._id}`}>{goal.title}</a>
+                <DeleteBtn goalId={goal._id} />
+            </li>
+        );
     });
     
     

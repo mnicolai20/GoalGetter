@@ -115,6 +115,7 @@ class JoinGoal extends Component{
         })
         .then(response => {
             console.log(response)
+            this.props.history.push('/homepage')
         })
         .catch(error => {
             console.log(error);
